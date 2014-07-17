@@ -1,3 +1,8 @@
-- provide(:title,'hello world')
-%h1 StaticPages#home
-%p Find me in app/views/static_pages/home.html.haml
+.center.hero-unit
+  %h1 Welcome to the Sample App
+  %h2
+    This is the home page for
+    = link_to "Ruby on Rails Tutorial",'http://railstutorial.org/'
+    sample application.
+  = link_to "Sign up now!", '#', class: "btn btn-large btn-primary"
+  = link_to image_tag("rails.png", alt: "Rails"),'http://railstutorial.org/'
