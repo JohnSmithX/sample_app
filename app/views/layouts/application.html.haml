@@ -2,10 +2,12 @@
 %html
   %head
     %title
-      - if yield(:title).length > 0
-        = "#{yield(:title)} | SampleApp"
-      - else
-        = "SampleApp"
+      -# old method replace with application_helper.rb
+      -#- if yield(:title).length > 0
+      -#  = "#{yield(:title)} | SampleApp"
+      -#- else
+      -#  = "SampleApp"
+      = full_title(yield(:title))
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags

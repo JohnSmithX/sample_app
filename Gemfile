@@ -3,10 +3,17 @@ source 'https://ruby.taobao.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
-# Use sqlite3 as the database for Active Record
+# Use PostgreSQL as the database for Active Record
+
+gem 'pg'
+
 group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails','~> 2.13.1'
+  gem 'guard-rspec','~> 3.1.0'
+  gem 'spork-rails','~> 4.0.0'
+  gem 'guard-spork','~> 1.5.1'
+  gem 'childprocess','~> 0.5.3'
 end
 gem 'minitest'
 group :test do
@@ -17,6 +24,9 @@ end
 # Use haml template engine
 gem 'haml'
 gem 'haml-rails'
+
+
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
