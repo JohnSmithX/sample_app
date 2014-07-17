@@ -6,13 +6,17 @@ gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
-  gem 'rspec-rails'
+  gem 'rspec-rails','~> 2.13.1'
 end
-
+gem 'minitest'
 group :test do
   gem 'selenium-webdriver'
-  gem 'capybara'
+  gem 'capybara','~> 2.1.0'
 end
+
+# Use haml template engine
+gem 'haml'
+gem 'haml-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
