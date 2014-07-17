@@ -1,6 +1,7 @@
 !!!
-%html
+%html(lang="zh_CN")
   %head
+    %meta(name = "viewport" content = "width=device-width, initial-scale" )
     %title
       -# old method replace with application_helper.rb
       -#- if yield(:title).length > 0
@@ -14,14 +15,19 @@
     /[if lt IE 9]
       %script(src = "http://html5shim.googlecode.com/svn/trunk/html5.js")
   %body
-    %header.navbar.navbar-fixed-top.navbar-inverse
-      .navbar-inner
-        .container
-          = link_to "sample app",'#',id:"logo"
-          %nav
-            %ul.nav.pull-right
-              %li= link_to "Home",'#'
-              %li= link_to "Help",'#'
-              %li= link_to "Sign in",'#'
-    .container
-      = yield
+    .navbar.navbar-inverse.navbar-fixed-top(role = "navigation")
+      .container
+        .navbar-header
+          = link_to "sample app", '#', id:"logo", class:"navbar-brand"
+        .navbar-collapse.collapse
+          %ul.nav.navbar-nav
+            %li= link_to "主页", '#', class:"active"
+            %li= link_to "帮助", '#'
+            %li= link_to "登录", '#'
+    .container(role = "main")
+      .jumbotron
+        = yield
+    .footer
+      .container
+        = link_to "注册", '#', class: "btn btn-large btn-primary"
+        = link_to image_tag("rails.png", alt: "Rails" ,class: "img-rounded"),'http://railstutorial.org/', class: "text-left"
