@@ -12,17 +12,17 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    /[if lt IE 9]
-      %script(src = "http://html5shim.googlecode.com/svn/trunk/html5.js")
+    = render 'layouts/shim'
   %body
     .navbar.navbar-inverse.navbar-fixed-top(role = "navigation")
       .container
         .navbar-header
-          = link_to "sample app", '#', id:"logo", class:"navbar-brand"
+          = link_to "YYO", '#', id:"logo", class:"navbar-brand"
         .navbar-collapse.collapse
           %ul.nav.navbar-nav
-            %li= link_to "主页", '#', class:"active"
-            %li= link_to "帮助", '#'
+            %li= link_to "主页", '/', class:"active"
+            %li= link_to "帮助", help_path
+            %li= link_to "关于", contact_path
             %li= link_to "登录", '#'
     .container(role = "main")
       .jumbotron

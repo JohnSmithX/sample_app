@@ -1,6 +1,10 @@
 source 'https://ruby.taobao.org'
 
 
+require 'rbconfig'
+if RbConfig::CONFIG['target_os'] =~ /mswin|mingw|cygwin/i
+  gem 'wdm', '>= 0.1.0'
+end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 4.1.4'
 # Use PostgreSQL as the database for Active Record
