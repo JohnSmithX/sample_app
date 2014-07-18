@@ -4,9 +4,10 @@ Rails.application.routes.draw do  # The priority is based upon order of creation
   root to: 'static_pages#home'
 
   match '/help', to: 'static_pages#help', via: 'get'
-
-
   match '/contact', to: 'static_pages#contact', via: 'get'
+  match '/signup', to: 'users#new', via: 'get'
+
+  get 'users/new'
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
