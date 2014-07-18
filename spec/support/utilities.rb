@@ -1,1 +1,1 @@
-include ApplicationHelpergit
+include ApplicationHelper
