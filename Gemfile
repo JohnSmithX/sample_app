@@ -33,6 +33,8 @@ gem 'haml-rails'
 gem 'bootstrap-sass', '~> 3.2.0.0'
 gem 'font-awesome-sass', '~> 4.1.0'
 
+#security password
+gem "bcrypt-ruby", '~> 3.1.5'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
