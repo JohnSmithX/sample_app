@@ -23,6 +23,7 @@ gem 'minitest'
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara','~> 2.1.0'
+  gem 'factory_girl_rails', '~> 4.4.1'
 end
 
 # Use haml template engine
