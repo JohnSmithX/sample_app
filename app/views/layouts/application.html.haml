@@ -24,8 +24,20 @@
             %li= link_to "帮助", help_path
             %li= link_to "关于", contact_path
           %ul.nav.navbar-nav.navbar-right
-            %li= link_to "登录", '#'
-            %li= link_to "注册", signup_path, class: "btn btn-info"
+            - if signed_in?
+              %li= link_to "用户", '#'
+              %li.dropdown#fat-menu
+                %a(href="#" class="dropdown-toggle" data-toggle="dropdown")
+                  账户
+                  %b.caret
+                %ul.dropdown-menu(role="menu" aria-labelledby="dropdownMenu3")
+                  %li= link_to "个人", current_user
+                  %li= link_to "设置", "#"
+                  %li.divider
+                  %li= link_to "登出", signout_path, method: "delete"
+            - else
+              %li= link_to "登录", signin_path
+              %li= link_to "注册", signup_path, class: "btn btn-info"
     .container(role = "main")
       .jumbotron
         - flash.each do |key,value|

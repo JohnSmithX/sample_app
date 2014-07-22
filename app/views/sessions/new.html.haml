@@ -1,0 +1,17 @@
+- provide(:title, "Sign in")
+.row
+  .col-md-6.col-md-offset-3
+    %h2 登  陆
+    = form_for(:session, url: sessions_path) do |f|
+      = render "shared/error_messages"
+      .form-group
+        = f.label :email, "邮箱"
+        = f.text_field :email, class: "form-control"
+      .form-group
+        = f.label :password, "密码"
+        = f.text_field :password, class: "form-control"
+      = f.submit "登陆", class: "btn btn-lg btn-primary"
+    %p
+      新用户?
+      = link_to "现在注册", signup_path
+
