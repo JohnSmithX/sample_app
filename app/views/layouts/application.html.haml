@@ -29,8 +29,11 @@
     .container(role = "main")
       .jumbotron
         - flash.each do |key,value|
-          %div(class = "alert alert-#{key}")= value
+          = content_tag(:div, value, class: "alert alert-#{key}")
+          -# without method content_tag
+          -#%div(class = "alert alert-#{key}")= value
         = yield
+
       .footer
         .container
           -#= link_to image_tag("rails.png", alt: "Rails" ,class: "img-responsive img-rounded"),'http://railstutorial.org/', class: "text-left"
