@@ -1,8 +1,10 @@
-- if @user != nil
-  - if @user.errors.any?
+- if object != nil
+  - if object.errors.any?
     #error_explanation
       .alert.alert-danger
-        = pluralize(@user.errors.count, "error")
+        = pluralize(object.errors.count, "error")
       %ul
-        - @user.errors.full_messages.each do |msg|
-          %li= "*" + msg
+        - object.errors.full_messages.each do |msg|
+          %li= "* " + msg
+
+

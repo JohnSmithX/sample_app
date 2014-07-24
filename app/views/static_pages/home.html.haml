@@ -1,5 +1,15 @@
-.center.hero-unit
-  %h1 欢迎来到我的小站
-  %h2
-    这是一个测试页面。
+- if signed_in?
+  .row
+    %aside.col-md-4
+      %section
+        = render 'shared/user_info'
+        = render 'shared/micropost_form'
+    .col-md-8
+      %h3 所有微博
+      = render 'shared/feed'
+- else
+  .center.hero-unit
+    %h1 欢迎来到我的小站
+    %h2
+      这是一个测试页面。
 
