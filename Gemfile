@@ -19,7 +19,7 @@ group :development, :test do
   gem 'guard-spork','~> 1.5.1'
   gem 'childprocess','~> 0.5.3'
 end
-gem 'minitest'
+gem 'minitest', '~> 5.4.0'
 group :test do
   gem 'selenium-webdriver'
   gem 'capybara','~> 2.1.0'
@@ -36,6 +36,9 @@ gem 'font-awesome-sass', '~> 4.1.0'
 
 #security password
 gem "bcrypt-ruby", '~> 3.1.5'
+gem "faker", "~> 1.4.2"
+gem "will_paginate", "~> 3.0.7"
+gem "bootstrap-will_paginate", "~> 0.0.10"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
